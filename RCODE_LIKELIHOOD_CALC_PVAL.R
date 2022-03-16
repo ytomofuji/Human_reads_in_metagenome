@@ -26,7 +26,7 @@ mutate(REF_ALT=log10(1/2)*(REF_CT+ALT_CT))%>%
 mutate(ALT_ALT=log10(E)*REF_CT+ log10(1-E)*ALT_CT)
 
 #calculate per sample likelihood score
-#sum up log scaled genotype probability
+#sum up genotype probability
 res<-c()
 for(sample in sample_list){
     WGS<-dplyr::select(geno,all_of(c("CHROM","POS","REF","ALT",sample)))
