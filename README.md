@@ -33,4 +33,16 @@ This script outputs human reads in the metagenome shotgun sequencing data (`non_
 In addition, coverages of the non-PAR of X and Y chromosomes are output into `bedcov_${ID}_nonPAR_XY.txt`, which can be used to predict genetic sex of the metagenome shotgun sequencing data.
 
 # 2. Re-identification from a set of genotype data
-Pair of the metagenome shotgun sequencing data and genotype data derived from the same individual
+Likelihood scores for each metagenome shotgun sequencing data could be calculated with the script `PIPELINE_2_likelihood_reidentification_test.sh`. The likelihood score reflected the likelihood that the observed human reads in the gut MSS data were derived from the target genotype data in `GENOME_FILE`.
+Following variables are required
+
+VCF_NAME: Name of the vcf file added to the output files
+GENOME_FILE: Vcf file for genotype dataset for which the likelihood score is calculated
+REF_FASTA: reference genome file (ex: hg37_1kg_decoy)
+DIR: Directory for analysis
+REFERENCE_PANEL: Vcf file for reference genotype data
+REF_PLINK: Plink file for reference genotype data
+ID: Sample ID
+
+This script outputs human reads in the metagenome shotgun sequencing data (`non_bacterial_${ID}_mapped.bam`) which can be used in the subsequent analyses.
+In addition, coverages of the non-PAR of X and Y chromosomes are output into `bedcov_${ID}_nonPAR_XY.txt`, which can be used to predict genetic sex of the metagenome shotgun sequencing data.
