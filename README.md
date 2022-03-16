@@ -67,3 +67,20 @@ The column of the `${ID}_likelihood_p_val_result.txt` indicates following values
 <img src="Figure/likelihood_score_anc.jpg" width=100%>
 </div>
 
+Likelihood scores for each metagenome shotgun sequencing data could be calculated with the script `PIPELINE_3_likelihood_test_ancestry.sh`. The likelihood score reflected the likelihood that the observed human reads in the gut MSS data were derived from the specified ancestries (`AMR, AFR, EUR, EAS, SAS` in this study).
+Following variables are required
+
+`REF_FASTA`: reference genome file (ex: hg37_1kg_decoy)   
+`DIR`: Directory for analysis  
+`OKG_REF_DIR`: Directry for the 1KG reference data   
+`ID`: Sample ID   
+
+Following files should be in `OKD_REF_DIR`   
+1. ALL_POP.chr{1-22}.freq.chr.pos.gz
+
+|  CHR  |  POS |  REF  |  ALT |  ID  |  AMR |  AFR  |  EUR |  EAS  |  SAS  |
+|  22  |  16050075 |  A  |  G |  rs587697622  |  0 |  0  |  0 |  0  |  0.001022  |
+
+
+2.
+
