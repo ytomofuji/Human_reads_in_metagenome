@@ -30,8 +30,7 @@ Our script recovers following information from the human reads in the metagenome
 
 First, human reads are extracted from gut metagenome shotgun sequencing data with the script `PIPELINE_1_human_read_extraction.sh`.  
 Input file should be named as `${ID}_R1.fastq.gz` and `${ID}_R2.fastq.gz`  
-Following variables are required
-
+Following variables are required:  
 `TRIM_ADAPT`: adaptor-sequence (ex: TruSeq3-PE-2.fa)  
 `BOWTIE2_REF_HUM`: reference file for bowtie2 (human, ex: hg37_1kg_decoy)  
 `BOWTIE2_REF_BAC`: reference file for bowtie2 (bacteria)  
@@ -48,9 +47,8 @@ In addition, coverages of the non-PAR of X and Y chromosomes are output into `be
 <img src="Figure/likelihood_score.jpg" width=100%>
 </div>
 
-Likelihood scores for each metagenome shotgun sequencing data are calculated with the script `PIPELINE_2_likelihood_reidentification_test.sh`. The likelihood score reflects the likelihood that the observed human reads in the gut MSS data are derived from the target genotype data in `GENOME_FILE`.
-Following variables are required
-
+Likelihood scores for each metagenome shotgun sequencing data are calculated with the script `PIPELINE_2_likelihood_reidentification_test.sh`. The likelihood score reflects the likelihood that the observed human reads in the gut MSS data are derived from the target genotype data in `GENOME_FILE`.   
+Following variables are required:  
 `VCF_NAME`: Name of the vcf file added to the output filename  
 `GENOME_FILE`: Vcf file for genotype dataset for which the likelihood score is calculated  
 `REF_FASTA`: reference genome file (ex: hg37_1kg_decoy)  
@@ -74,8 +72,8 @@ The columns of the `${ID}_likelihood_p_val_result.txt` indicate following values
 <img src="Figure/likelihood_score_anc.jpg" width=100%>
 </div>
 
-Likelihood scores for each metagenome shotgun sequencing data are calculated with the script `PIPELINE_3_likelihood_test_ancestry.sh`. The likelihood score reflects the likelihood that the observed human reads in the gut MSS data are derived from the specified ancestries (`AMR, AFR, EUR, EAS, SAS` in this study).
-Following variables are required
+Likelihood scores for each metagenome shotgun sequencing data are calculated with the script `PIPELINE_3_likelihood_test_ancestry.sh`. The likelihood score reflects the likelihood that the observed human reads in the gut MSS data are derived from the specified ancestries (`AMR, AFR, EUR, EAS, SAS` in this study).  
+Following variables are required:  
 
 `REF_FASTA`: reference genome file (ex: hg37_1kg_decoy)   
 `DIR`: Directory for analysis  
