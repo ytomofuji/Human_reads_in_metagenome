@@ -79,8 +79,29 @@ Following files should be in `OKD_REF_DIR`
 1. ALL_POP.chr{1-22}.freq.chr.pos.gz
 
 |  CHR  |  POS |  REF  |  ALT |  ID  |  AMR |  AFR  |  EUR |  EAS  |  SAS  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  22  |  16050075 |  A  |  G |  rs587697622  |  0 |  0  |  0 |  0  |  0.001022  |
+|  22  |  16050115 |  G  |  A |  rs587755077  |  0.001441 |  0  |  0.02345 |  0  |  0 |
+|  ...  |  ... |  ...  |  ... |  ...  |  ... |  ...  |  ... |  ...  |  ... |
+
+`CHR`: Chromosome
+`POS`: Position
+`REF`: Reference allele
+`ALT`: Alternative allele  
+`ID`: SNP ID
+`AMR`-`SAS`: Allele frequency in each ancestry
 
 
-2.
+2. 1KG_CHR_POS_REF_ALT_sorted.txt (sorted based on the CHR:POS)
+
+|  CHR:POS |  REF  |  ALT |
+| --- | --- | --- |
+|  chr10:100000003  |  C  |  T  |
+|  chr10:10000001  |  C  |  T  |
+|  ...  |  ... |  ...  | 
+
+`CHR:POS`: Chromosome:Position
+`REF`: Reference allele
+`ALT`: Alternative allele  
+
 
