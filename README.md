@@ -22,7 +22,8 @@ fastqc
 <img src="Figure/human_read_extraction_figure.jpg" width=40%>
 </div>
 
-First, human reads are extracted from gut metagenome shotgun sequencing data with the script `PIPELINE_1_human_read_extraction.sh`. 
+First, human reads are extracted from gut metagenome shotgun sequencing data with the script `PIPELINE_1_human_read_extraction.sh`.  
+Input file should be named as `${ID}_R1.fastq.gz` and `${ID}_R2.fastq.gz`  
 Following variables are required
 
 `TRIM_ADAPT`: adaptor-sequence (ex: TruSeq3-PE-2.fa)  
@@ -103,5 +104,13 @@ Following files should be in `OKD_REF_DIR`
 `CHR:POS`: Chromosome:Position
 `REF`: Reference allele
 `ALT`: Alternative allele  
+
+The output is written to `${ID}_population_likelihood_result.txt` and each columun indicates following values
+
+`Sample_ID`: Sample ID of the metagenome shotgun sequencing data  
+`USED_BASE_NUM`: Number of the bases used for the analysis   
+`{AMR, EUR, AFR, EAS, SAS}_LIK`: Likelihood score for each ancestry   
+`TOP_POP`: The population with the highest likelihood score    
+
 
 
