@@ -45,7 +45,7 @@ In addition, coverages of the non-PAR of X and Y chromosomes are output into `be
 Likelihood scores for each metagenome shotgun sequencing data could be calculated with the script `PIPELINE_2_likelihood_reidentification_test.sh`. The likelihood score reflected the likelihood that the observed human reads in the gut MSS data were derived from the target genotype data in `GENOME_FILE`.
 Following variables are required
 
-`VCF_NAME`: Name of the vcf file added to the output filename
+`VCF_NAME`: Name of the vcf file added to the output filename  
 `GENOME_FILE`: Vcf file for genotype dataset for which the likelihood score is calculated  
 `REF_FASTA`: reference genome file (ex: hg37_1kg_decoy)  
 `DIR`: Directory for analysis  
