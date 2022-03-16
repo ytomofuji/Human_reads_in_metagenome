@@ -1,6 +1,6 @@
 # Analysis of the human reads in gut metagenome shotgun sequencing data
 This is a repository of the codes used in the Tomofuji et al (Reconstruction of the personal information from the contaminated human reads in the gut metagenome shotgun sequencing data).  
-Our software recovers following information from the human reads in the metagenome shotgun sequencing data  
+Our script recovers following information from the human reads in the metagenome shotgun sequencing data  
 ・Genetic sex of the metagenome shotgun sequencing data  
 ・Pair of the metagenome shotgun sequencing data and genotype data derived from the same individual  
 ・Genetic ancestry of the metagenome shotgun sequencing data   
@@ -11,17 +11,19 @@ Our software recovers following information from the human reads in the metageno
 </div>
 
 # Requirements
-・R  
-・tidyverse  
-・python3  
-・bowtie2    
-・samtools    
-・bedtools    
-・bcftools    
-・fastqc  
-・plink1.9  
+・R (version 4.0.1)  
+・Trimmomatic (version 0.39)  
+・tidyverse (version 1.3.0)  
+・python3 (version 3.7.6)  
+・Picard (version 2.22.8)  
+・bowtie2 (version 2.3.5.1)     
+・samtools (version 2.3.5.1)   
+・bedtools (version 2.29.2)  
+・bcftools (version 1.10.2)  
+・fastqc (version 0.11.9)  
+・plink (version 1.90b4.4)  
 
-# 1. Extraction of the human reads + prediction of genetic sex
+# 1. Extraction of the human reads and prediction of genetic sex
 <div align="center">
 <img src="Figure/human_read_extraction_figure.jpg" width=40%>
 </div>
@@ -46,7 +48,7 @@ In addition, coverages of the non-PAR of X and Y chromosomes are output into `be
 <img src="Figure/likelihood_score.jpg" width=100%>
 </div>
 
-Likelihood scores for each metagenome shotgun sequencing data are calculated with the script `PIPELINE_2_likelihood_reidentification_test.sh`. The likelihood score reflected the likelihood that the observed human reads in the gut MSS data were derived from the target genotype data in `GENOME_FILE`.
+Likelihood scores for each metagenome shotgun sequencing data are calculated with the script `PIPELINE_2_likelihood_reidentification_test.sh`. The likelihood score reflects the likelihood that the observed human reads in the gut MSS data are derived from the target genotype data in `GENOME_FILE`.
 Following variables are required
 
 `VCF_NAME`: Name of the vcf file added to the output filename  
@@ -58,7 +60,7 @@ Following variables are required
 `ID`: Sample ID   
 
 This script outputs likelihood score for each pair of the metagenome shotgun sequencing data and target genotype data.
-The column of the `${ID}_likelihood_p_val_result.txt` indicates following values
+The columns of the `${ID}_likelihood_p_val_result.txt` indicate following values
 
 `ID`: Sample ID of the target genotype data   
 `Score`: Lilelihood score  
