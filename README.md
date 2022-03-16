@@ -11,13 +11,15 @@ Our software recovers following information from the human reads in the metageno
 </div>
 
 # Requirements
-```
-bowtie2  
-samtools  
-bedtools  
-bcftools  
-fastqc  
-```
+・R  
+・tidyverse  
+・python3  
+・bowtie2    
+・samtools    
+・bedtools    
+・bcftools    
+・fastqc  
+・plink1.9  
 
 # 1. Extraction of the human reads + prediction of genetic sex
 <div align="center">
@@ -75,7 +77,7 @@ Following variables are required
 
 `REF_FASTA`: reference genome file (ex: hg37_1kg_decoy)   
 `DIR`: Directory for analysis  
-`OKG_REF_DIR`: Directry for the 1KG reference data   
+`OKG_REF_DIR`: Directory for the 1KG reference data   
 `ID`: Sample ID   
 
 Following files should be in `OKD_REF_DIR`   
