@@ -1,6 +1,6 @@
 # Analysis of the human reads in gut metagenome shotgun sequencing data
-This is a repository of the codes used in the Tomofuji et al (Reconstruction of the personal information from the contaminated human reads in the gut metagenome shotgun sequencing data).
-Our software recovers following information from the human reads in the metagenome shotgun sequencing data
+This is a repository of the codes used in the Tomofuji et al (Reconstruction of the personal information from the contaminated human reads in the gut metagenome shotgun sequencing data).  
+Our software recovers following information from the human reads in the metagenome shotgun sequencing data  
 ・Genetic sex of the metagenome shotgun sequencing data
 ・Pair of the metagenome shotgun sequencing data and genotype data derived from the same individual
 ・Genetic ancestry of the metagenome shotgun sequencing data
@@ -18,6 +18,10 @@ fastqc
 ```
 
 # 1. Extraction of the human reads + prediction of genetic sex
+<div align="center">
+<img src="Figure/human_read_extraction_figure.jpg" width=40%>
+</div>
+
 First, human reads are extracted from gut metagenome shotgun sequencing data with the script `PIPELINE_1_human_read_extraction.sh`. 
 Following variables are required
 
@@ -33,6 +37,10 @@ This script outputs human reads in the metagenome shotgun sequencing data (`non_
 In addition, coverages of the non-PAR of X and Y chromosomes are output into `bedcov_${ID}_nonPAR_XY.txt`, which can be used to predict genetic sex of the metagenome shotgun sequencing data.
 
 # 2. Re-identification from a set of genotype data
+<div align="center">
+<img src="Figure/likelihood_score.jpg" width=100%>
+</div>
+
 Likelihood scores for each metagenome shotgun sequencing data could be calculated with the script `PIPELINE_2_likelihood_reidentification_test.sh`. The likelihood score reflected the likelihood that the observed human reads in the gut MSS data were derived from the target genotype data in `GENOME_FILE`.
 Following variables are required
 
@@ -55,4 +63,7 @@ The column of the `${ID}_likelihood_p_val_result.txt` indicates following values
 `ID_MATCH`: Whether the ID of the metagenome shotgun sequencing data is matched to that of the target genotype data  
 
 # 3. Prediction of the ancestry
+<div align="center">
+<img src="Figure/likelihood_score_anc.jpg" width=100%>
+</div>
 
