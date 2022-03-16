@@ -6,7 +6,9 @@ Our software recovers following information from the human reads in the metageno
 ・Genetic ancestry of the metagenome shotgun sequencing data   
 
 # Overview
-![Image 1](Figure/Graphical_abstract.jpg)
+<div align="center">
+<img src="Figure/Graphical_abstract.jpg" width=60%>
+</div>
 
 # Requirements
 ```
@@ -42,7 +44,7 @@ In addition, coverages of the non-PAR of X and Y chromosomes are output into `be
 <img src="Figure/likelihood_score.jpg" width=100%>
 </div>
 
-Likelihood scores for each metagenome shotgun sequencing data could be calculated with the script `PIPELINE_2_likelihood_reidentification_test.sh`. The likelihood score reflected the likelihood that the observed human reads in the gut MSS data were derived from the target genotype data in `GENOME_FILE`.
+Likelihood scores for each metagenome shotgun sequencing data are calculated with the script `PIPELINE_2_likelihood_reidentification_test.sh`. The likelihood score reflected the likelihood that the observed human reads in the gut MSS data were derived from the target genotype data in `GENOME_FILE`.
 Following variables are required
 
 `VCF_NAME`: Name of the vcf file added to the output filename  
@@ -68,7 +70,7 @@ The column of the `${ID}_likelihood_p_val_result.txt` indicates following values
 <img src="Figure/likelihood_score_anc.jpg" width=100%>
 </div>
 
-Likelihood scores for each metagenome shotgun sequencing data could be calculated with the script `PIPELINE_3_likelihood_test_ancestry.sh`. The likelihood score reflected the likelihood that the observed human reads in the gut MSS data were derived from the specified ancestries (`AMR, AFR, EUR, EAS, SAS` in this study).
+Likelihood scores for each metagenome shotgun sequencing data are calculated with the script `PIPELINE_3_likelihood_test_ancestry.sh`. The likelihood score reflects the likelihood that the observed human reads in the gut MSS data are derived from the specified ancestries (`AMR, AFR, EUR, EAS, SAS` in this study).
 Following variables are required
 
 `REF_FASTA`: reference genome file (ex: hg37_1kg_decoy)   
@@ -113,4 +115,5 @@ The output is written to `${ID}_population_likelihood_result.txt` and each colum
 `TOP_POP`: The population with the highest likelihood score    
 
 
-
+## Contact
+Yoshihiko Tomofuji: ytomofuji_at_sg.med.osaka-u.ac.jp
