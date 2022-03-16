@@ -68,8 +68,7 @@ SAS_LIK_SUM=sum(data$SAS_LIK)
 
 LIK_VEC<-c(AMR_LIK_SUM,EUR_LIK_SUM,AFR_LIK_SUM,EAS_LIK_SUM,SAS_LIK_SUM)
 POPS<-c("AMR","EUR","AFR","EAS","SAS")
-TOP_ETH<-POPS[which(LIK_VEC==max(LIK_VEC))]
-PROB_TOP<-(1/sum(10**(LIK_VEC-max(LIK_VEC))))
+TOP_POP<-POPS[which(LIK_VEC==max(LIK_VEC))]
 
 summary<-tibble(Sample_ID=ID,
 THR=ENAME_LIST[i],USED_BASE_NUM=USED_BASE_NUM,
@@ -78,8 +77,7 @@ EUR_LIK=sum(data$EUR_LIK),
 AFR_LIK=sum(data$AFR_LIK),
 EAS_LIK=sum(data$EAS_LIK),
 SAS_LIK=sum(data$SAS_LIK),
-TOP_ETH=TOP_ETH,
-PROB_TOP=PROB_TOP
+TOP_POP=TOP_POP
 )
 total_summary<-bind_rows(total_summary,summary)
 }

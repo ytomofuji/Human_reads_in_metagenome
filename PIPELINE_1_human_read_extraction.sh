@@ -6,6 +6,7 @@ BOWTIE2_REF_BAC: reference file for bowtie2 (bacteria)
 DIR: Directory for analysis
 FASTQ_DIR: Directory of original fastq file
 ID: Sample ID
+BED_OF_NONPAR: bed file for non-PAR
 VARIABLE
 
 #Requirement
@@ -134,7 +135,7 @@ samtools idxstats ../BAM/non_bacterial_${ID}_mapped.bam \
 
 samtools view -u \
 ../BAM/non_bacterial_${ID}_mapped.bam | \
-bedtools coverage -a ${HOME}/reference/human/hg37_non_PAR.bed \
+bedtools coverage -a ${BED_OF_NONPAR} \
 -b stdin -counts -F 0.1 | \
 awk 'BEGIN{OFS="\t"}{print $0"\t"$4/($3-$2)"\t"$4}' | \
 sed '1i CHR\tSTART\tEND\tBP\tDepth\tCount' > bedcov_${ID}_nonPAR_XY.txt
