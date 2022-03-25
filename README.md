@@ -17,7 +17,7 @@ Our script recovers following information from the human reads in the metagenome
 ・bedtools (version 2.29.2)  
 ・bowtie2 (version 2.3.5.1)  
 ・fastqc (version 0.11.9)  
-・GATK (version 4.1.7)
+・GATK (version 4.1.7)   
 ・Picard (version 2.22.8)  
 ・plink (version 1.90b4.4)  
 ・python3 (version 3.7.6)  
