@@ -124,7 +124,7 @@ The output is written to `${ID}_population_likelihood_result.txt` and each colum
 
 # 4. Reconstruction of the genotypes
 
-Reconstruction of the genotypes from the gut metagenome shotgun sequencing data was performed with two complementary methods, namely two-step inputation (PIPELINE_4_ldWGS_two_step_imputation.sh) and direct genotype calling (PIPELINE_5_variant_call_GATK.sh). We performed two-step imputation as described in the Homburger et al. (https://doi.org/10.1186/s13073-019-0682-2). Direct genotype calling was performed basically as described in the GATK Best Practices Workflows (https://gatk.broadinstitute.org/hc/en-us/articles/360035535932-Germline-short-variant-discovery-SNPs-Indels-).
+Reconstruction of the genotypes from the gut metagenome shotgun sequencing data was performed with two complementary methods, namely two-step inputation (`PIPELINE_4_ldWGS_two_step_imputation.sh`) and direct genotype calling (`PIPELINE_5_variant_call_GATK.sh`). We performed two-step imputation as described in the Homburger et al. (https://doi.org/10.1186/s13073-019-0682-2). Direct genotype calling was performed basically as described in the GATK Best Practices Workflows (https://gatk.broadinstitute.org/hc/en-us/articles/360035535932-Germline-short-variant-discovery-SNPs-Indels-).
 
 ## Contact
 Yoshihiko Tomofuji: ytomofuji_at_sg.med.osaka-u.ac.jp
