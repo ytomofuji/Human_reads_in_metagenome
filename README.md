@@ -11,7 +11,7 @@ Our script recovers following information from the human reads in the metagenome
 </div>
 
 # Requirements
-・bcftools (version 1.10.2)   
+・bcftools (version 1.15.1)   
 ・beagle4.1 (27Jan18)   
 ・beagle5.1 (18May20)   
 ・bedtools (version 2.29.2)  
